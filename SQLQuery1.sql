@@ -27,11 +27,24 @@ VALUES
 	 'Unknown'
 	 from customers */
 
-	 UPDATE customers
+	/*UPDATE customers
 	 SET score = 999
 	 WHERE score = 0
 
 
 	 SELECT *
-	 FROM customers
+	 FROM customers*/
 	 
+
+	 
+SELECT *
+from orders as o
+full join customers as c
+on c.id = o.customer_id
+
+
+select * 
+from customers as c
+left join orders as o
+on c.id = o.customer_id
+where o.customer_id is not null
